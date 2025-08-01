@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio | DigiMarkPro</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">DigiMarkPro</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
+                <a href="services.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Services</a>
+                <a href="portfolio.html" class="text-blue-600 font-medium">Portfolio</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600 transition duration-300">About Us</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <svg class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white w-full" id="mobile-menu">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
+                <a href="services.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Services</a>
+                <a href="portfolio.html" class="text-blue-600 font-medium">Portfolio</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600 transition duration-300">About Us</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-24 bg-gradient-to-r from-blue-600 to-indigo-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Our Portfolio</h1>
+            <p class="text-xl max-w-3xl mx-auto">Explore our successful projects and see how we've helped businesses achieve their digital marketing goals.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center mb-8">
+                <button class="filter-btn active m-2 px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300" data-filter="all">All</button>
+                <button class="filter-btn m-2 px-6 py-2 bg-gray-200 text-gray-800 rounded-full hover:bg-blue-600 hover:text-white transition duration-300" data-filter="seo">SEO</button>
+                <button class="filter-btn m-2 px-6 py-2 bg-gray-200 text-gray-800 rounded-full hover:bg-blue-600 hover:text-white transition duration-300" data-filter="marketing">Digital Marketing</button>
+                <button class="filter-btn m-2 px-6 py-2 bg-gray-200 text-gray-800 rounded-full hover:bg-blue-600 hover:text-white transition duration-300" data-filter="automation">Automation</button>
+                <button class="filter-btn m-2 px-6 py-2 bg-gray-200 text-gray-800 rounded-full hover:bg-blue-600 hover:text-white transition duration-300" data-filter="ai">AI Solutions</button>
+                <button class="filter-btn m-2 px-6 py-2 bg-gray-200 text-gray-800 rounded-full hover:bg-blue-600 hover:text-white transition duration-300" data-filter="web">Web Development</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="portfolio-item seo web" data-category="seo,web">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <img src="./images/portfolio/project1.jpg" alt="E-commerce SEO Project" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">E-commerce SEO Overhaul</h3>
+                            <p class="text-gray-600 mb-4">Increased organic traffic by 200% and improved conversion rates for an online retail store.</p>
+                            <div class="flex flex-wrap">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">SEO</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">Web Development</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">E-commerce</span>
+                            </div>
+                            <a href="#" class="inline-block mt-4 text-blue-600 font-medium hover:text-blue-800 transition duration-300">View Case Study →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item marketing automation" data-category="marketing,automation">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <img src="./images/portfolio/project2.jpg" alt="Marketing Automation Project" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Marketing Automation Suite</h3>
+                            <p class="text-gray-600 mb-4">Implemented a comprehensive marketing automation system that increased lead conversion by 45%.</p>
+                            <div class="flex flex-wrap">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">Digital Marketing</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">Automation</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">CRM</span>
+                            </div>
+                            <a href="#" class="inline-block mt-4 text-blue-600 font-medium hover:text-blue-800 transition duration-300">View Case Study →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item ai" data-category="ai">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <img src="./images/portfolio/project3.jpg" alt="AI Chatbot Project" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Customer Service AI Chatbot</h3>
+                            <p class="text-gray-600 mb-4">Developed an AI-powered chatbot that reduced customer service response time by 80%.</p>
+                            <div class="flex flex-wrap">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">AI Solutions</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">Customer Service</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">Chatbot</span>
+                            </div>
+                            <a href="#" class="inline-block mt-4 text-blue-600 font-medium hover:text-blue-800 transition duration-300">View Case Study →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item web" data-category="web">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <img src="./images/portfolio/project4.jpg" alt="Website Redesign Project" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Corporate Website Redesign</h3>
+                            <p class="text-gray-600 mb-4">Completely redesigned a corporate website, resulting in a 60% increase in user engagement.</p>
+                            <div class="flex flex-wrap">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">Web Development</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">UI/UX Design</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">Corporate</span>
+                            </div>
+                            <a href="#" class="inline-block mt-4 text-blue-600 font-medium hover:text-blue-800 transition duration-300">View Case Study →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item marketing seo" data-category="marketing,seo">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <img src="./images/portfolio/project5.jpg" alt="Digital Marketing Campaign" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Integrated Marketing Campaign</h3>
+                            <p class="text-gray-600 mb-4">Executed a multi-channel marketing campaign that generated a 300% ROI for a B2B client.</p>
+                            <div class="flex flex-wrap">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">Digital Marketing</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">SEO</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">B2B</span>
+                            </div>
+                            <a href="#" class="inline-block mt-4 text-blue-600 font-medium hover:text-blue-800 transition duration-300">View Case Study →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-item automation ai" data-category="automation,ai">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <img src="./images/portfolio/project6.jpg" alt="AI-Powered Marketing Automation" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">AI-Powered Marketing Automation</h3>
+                            <p class="text-gray-600 mb-4">Implemented an AI-driven marketing automation system that increased customer retention by 35%.</p>
+                            <div class="flex flex-wrap">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">Automation</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">AI Solutions</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">Customer Retention</span>
+                            </div>
+                            <a href="#" class="inline-block mt-4 text-blue-600 font-medium hover:text-blue-800 transition duration-300">View Case Study →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Trusted by Leading Brands</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We've had the privilege of working with some amazing companies across various industries.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+                <div class="flex justify-center">
+                    <img src="./images/clients/client1.svg" alt="Client Logo" class="h-12 opacity-70 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex justify-center">
+                    <img src="./images/clients/client2.svg" alt="Client Logo" class="h-12 opacity-70 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex justify-center">
+                    <img src="./images/clients/client3.svg" alt="Client Logo" class="h-12 opacity-70 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex justify-center">
+                    <img src="./images/clients/client4.svg" alt="Client Logo" class="h-12 opacity-70 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex justify-center">
+                    <img src="./images/clients/client5.svg" alt="Client Logo" class="h-12 opacity-70 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex justify-center">
+                    <img src="./images/clients/client6.svg" alt="Client Logo" class="h-12 opacity-70 hover:opacity-100 transition duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Client Success Stories</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear what our clients have to say about their experience working with us.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"The SEO strategy DigiMarkPro implemented for our e-commerce store has been transformative. Our organic traffic has increased by 200% and our conversion rates have improved significantly."</p>
+                    <div class="flex items-center">
+                        <img src="./images/testimonials/client1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Robert Johnson</h4>
+                            <p class="text-gray-600 text-sm">CEO, Fashion Outlet</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"The AI chatbot developed by DigiMarkPro has revolutionized our customer service. Response times have decreased by 80% and customer satisfaction scores have never been higher."</p>
+                    <div class="flex items-center">
+                        <img src="./images/testimonials/client2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Jennifer Lee</h4>
+                            <p class="text-gray-600 text-sm">Customer Service Director, Tech Solutions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"The marketing automation system implemented by DigiMarkPro has streamlined our processes and significantly improved our lead nurturing. Our conversion rate has increased by 45%."</p>
+                    <div class="flex items-center">
+                        <img src="./images/testimonials/client3.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Michael Thompson</h4>
+                            <p class="text-gray-600 text-sm">Marketing Manager, Growth Enterprises</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Transform Your Digital Presence?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Contact us today to discuss how our services can help your business grow and succeed in the digital landscape.</p>
+            <a href="contact.html" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300 inline-block">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">DigiMarkPro</h3>
+                    <p class="mb-4">Transforming businesses through innovative digital marketing solutions.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-blue-400 transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-blue-400 transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.162 5.656a8.384 8.384 0 01-2.402.658A4.196 4.196 0 0021.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 00-7.126 3.814 11.874 11.874 0 01-8.62-4.37 4.168 4.168 0 00-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 01-1.894-.523v.052a4.185 4.185 0 003.355 4.101 4.21 4.21 0 01-1.89.072A4.185 4.185 0 007.97 16.65a8.394 8.394 0 01-6.191 1.732 11.83 11.83 0 006.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 002.087-2.165z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-blue-400 transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.98 0a6.9 6.9 0 01.702.031c.166.014.3.028.436.047.613.084 1.135.261 1.645.547.512.286.958.647 1.328 1.017.37.37.731.816 1.017 1.328.286.51.463 1.032.546 1.645.019.136.033.27.047.436.014.165.019.332.02.5.003.137.003.275.003.412 0 .137 0 .275-.003.412-.001.168-.006.335-.02.5-.014.166-.028.3-.047.436-.083.613-.26 1.135-.546 1.645-.286.512-.647.958-1.017 1.328-.37.37-.816.731-1.328 1.017-.51.286-1.032.463-1.645.546-.136.019-.27.033-.436.047-.165.014-.332.019-.5.02-.137.003-.275.003-.412.003-.137 0-.275 0-.412-.003-.168-.001-.335-.006-.5-.02-.166-.014-.3-.028-.436-.047-.613-.083-1.135-.26-1.645-.546-.512-.286-.958-.647-1.328-1.017-.37-.37-.731-.816-1.017-1.328-.286-.51-.463-1.032-.546-1.645-.019-.136-.033-.27-.047-.436-.014-.165-.019-.332-.02-.5-.003-.137-.003-.275-.003-.412 0-.137 0-.275.003-.412.001-.168.006-.335.02-.5.014-.166.028-.3.047-.436.083-.613.26-1.135.546-1.645.286-.512.647-.958 1.017-1.328.37-.37.816-.731 1.328-1.017.51-.286 1.032-.463 1.645-.546.136-.019.27-.033.436-.047.165-.014.332-.019.5-.02.137-.003.275-.003.412-.003.137 0 .275 0 .412.003.168.001.335.006.5.02.166.014.3.028.436.047.613.083 1.135.26 1.645.546.512.286.958.647 1.328 1.017.37.37.731.816 1.017 1.328.286.51.463 1.032.546 1.645.019.136.033.27.047.436.014.165.019.332.02.5.003.137.003.275.003.412 0 .137 0 .275-.003.412-.001.168-.006.335-.02.5-.014.166-.028.3-.047.436-.083.613-.26 1.135-.546 1.645-.286.512-.647.958-1.017 1.328-.37.37-.816.731-1.328 1.017-.51.286-1.032.463-1.645.546-.136.019-.27.033-.436.047-.165.014-.332.019-.5.02-.137.003-.275.003-.412.003-.137 0-.275 0-.412-.003-.168-.001-.335-.006-.5-.02-.166-.014-.3-.028-.436-.047-.613-.083-1.135-.26-1.645-.546-.512-.286-.958-.647-1.328-1.017-.37-.37-.731-.816-1.017-1.328-.286-.51-.463-1.032-.546-1.645-.019-.136-.033-.27-.047-.436-.014-.165-.019-.332-.02-.5-.003-.137-.003-.275-.003-.412 0-.137 0-.275.003-.412.001-.168.006-.335.02-.5.014-.166.028-.3.047-.436.083-.613.26-1.135.546-1.645.286-.512.647-.958 1.017-1.328.37-.37.816-.731 1.328-1.017.51-.286 1.032-.463 1.645-.546.136-.019.27-.033.436-.047.165-.014.332-.019.5-.02.137-.003.275-.003.412-.003.137 0 .275 0 .412.003.168.001.335.006.5.02.166.014.3.028.436.047.613.083 1.135.26 1.645.546.512.286.958.647 1.328 1.017.37.37.731.816 1.017 1.328.286.51.463 1.032.546 1.645.019.136.033.27.047.436.014.165.019.332.02.5.003.137.003.275.003.412z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-blue-400 transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#seo" class="text-gray-300 hover:text-white transition duration-300">SEO</a></li>
+                        <li><a href="services.html#marketing" class="text-gray-300 hover:text-white transition duration-300">Digital Marketing</a></li>
+                        <li><a href="services.html#automation" class="text-gray-300 hover:text-white transition duration-300">Marketing Automation</a></li>
+                        <li><a href="services.html#ai-agents" class="text-gray-300 hover:text-white transition duration-300">AI Agents & Chatbots</a></li>
+                        <li><a href="services.html#web-development" class="text-gray-300 hover:text-white transition duration-300">Website Development</a></li>
+                        <li><a href="services.html#content-creation" class="text-gray-300 hover:text-white transition duration-300">Content Creation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-gray-300 hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Careers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>123 Business Avenue, Suite 500<br>New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                            </svg>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            </svg>
+                            <span>info@digimarkpro.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2023 DigiMarkPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Portfolio Filter
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active', 'bg-blue-600', 'text-white');
+                        btn.classList.add('bg-gray-200', 'text-gray-800');
+                    });
+
+                    // Add active class to clicked button
+                    this.classList.add('active', 'bg-blue-600', 'text-white');
+                    this.classList.remove('bg-gray-200', 'text-gray-800');
+
+                    const filter = this.getAttribute('data-filter');
+
+                    // Show/hide portfolio items based on filter
+                    portfolioItems.forEach(item => {
+                        if (filter === 'all') {
+                            item.style.display = 'block';
+                        } else {
+                            const categories = item.getAttribute('data-category').split(',');
+                            if (categories.includes(filter)) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
